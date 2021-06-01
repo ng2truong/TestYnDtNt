@@ -1,2 +1,0 @@
-# TestYnDtNt
-Thu nghiem
