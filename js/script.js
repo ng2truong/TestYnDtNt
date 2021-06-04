@@ -53,3 +53,17 @@ function topFunction() {
     document.body.scrollTop = 0; // For Safari
     document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
 }
+
+// Xử lý rê chuột vào class
+var elems = document.querySelectorAll('.kh-sub');
+var btn_link = document.getElementById('btn-link');
+for (let i = 0; i < elems.length; i++) {
+    elems[i].addEventListener('mousemove', FuncIn, false);
+    elems[i].addEventListener('mouseleave', FuncOut, false);
+}
+function FuncIn() {
+    this.style.opacity = 0.5;
+}
+function FuncOut() {
+    this.style.opacity = 1;
+}
