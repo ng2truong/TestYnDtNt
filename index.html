@@ -2,37 +2,391 @@
 <html>
     <head>
         <meta charset="UTF-8">
-        <meta name="viewport" content="width-device-with, initial-scale=1.0">
-        <link rel="stylesheet" href="style1.css">
-        <title>Website Học Tập </title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Trang chủ - Website Học Tập</title>
+        <link rel="stylesheet" href="./css/style.css">
     </head>
     <body>
-       <head>
-           <div class="logo">
-               <img src="icon sach.jpeg">
-           </div>
-           <div class="menu">
-            <li><a href=""> Sách </a> </li>
-            <li><a href=""> Bài giảng </a></li>
-            <li><a href=""> hỏi và đáp </a></li>
-            <li><a href=""> bài tập rèn luyện </a></li>
-            <li><a href=""> Donate</a></li>
-           </div>
-           <div class="others">
-            <li> <input placeholder="Tìm kiếm " type="text"><i class="fa fa-searh"></i></li>
-           </div>
-       </head>
-       <section id="slider">
-        <div class="aspect-ratio-169">
-            <img src="hoc1.jpg">
-         </div>   
-         </section>
-         </body>
-         <body>
-             <p>Sách Hóa Lớp 12</p>
-             <img src="hoa12.jpg" alt="SGK Hóa học Lớp 12"
-             title="Hóa 12" width="300px" height="200px"/>
-             <p>Video bài giảng Kiềm Thổ</p>
-             <iframe width="560" height="315" src="https://www.youtube.com/embed/Vzvg9KJ0Ca4" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-         </body>
-         </html>
+
+        <header>
+            <img src="./images/icon sach.jpeg" alt="Logo">
+            <div>Website Học Tập</div>
+            <div>
+                <button class="btn-header" onclick="document.getElementById('idlogin').style.display='block'">Đăng nhập</button>
+                <button class="btn-header" onclick="document.getElementById('idsignup').style.display='block'">Đăng ký</button>
+            </div>
+        </header>
+
+        <nav>
+            <div class="navbar">
+                <a href="#trangchu">Trang chủ</a>
+                <a href="#gioithieu">Giới thiệu</a>
+                <a href="#khoahoc">Khóa học</a>
+                <a href="#luyentap">Luyện tập</a>
+                <a href="#tailieu">Tài liệu</a>
+                <a href="#congdong">Cộng đồng</a>
+                <a href="#trogiup">Trợ giúp</a>
+                <a href="#donate">Donate</a> 
+            </div>
+        </nav>
+
+        <div>
+
+            <aside>
+                <h2></h2>
+                <div class="tab">
+                    <button class="tablinks" onclick="openLevel(event, 'DHCD')" id="defaultOpen">Đại học - Cao đẳng</button>
+                    <button class="tablinks" onclick="openLevel(event, 'LTDH')">Luyện thi Đại học</button>
+                    <button class="tablinks" onclick="openLevel(event, 'THPT')">Trung học Phổ thông</button>
+                    <button class="tablinks" onclick="openLevel(event, 'THCS')">Trung học Cơ sở</button>
+                    <button class="tablinks" onclick="openLevel(event, 'TH')">Tiểu học</button>
+                </div>
+
+                <div id="DHCD" class="tabcontent">
+                    <h3>Đại học - Cao đẳng</h3>
+                    <p>Công nghệ thông tin.</p>
+                </div>
+                <div id="LTDH" class="tabcontent">
+                    <table>
+                        <tr>
+                            <th colspan="6">Luyện thi Đại học</th>
+                        </tr>
+                        <tr>
+                            <td><a href="#kh-LTDH">Khóa học</a></td>
+                            <td><a href="#kh-T">Toán</a></td>
+                            <td><a href="#kh-NV">Ngữ Văn</a></td>
+                            <td><a href="#kh-TA">Tiếng Anh</a></td>
+                            <td><a href="#kh-KHTN">Khoa học Tự nhiên</a></td>
+                            <td><a href="#kh-KHXH">Khoa học Xã hội</a></td>
+                        </tr>
+                        <tr>
+                            <td><a href="#">Luyện tập</a></td>
+                            <td><a href="#">Toán</a></td>
+                            <td><a href="#">Ngữ Văn</a></td>
+                            <td><a href="#">Tiếng Anh</a></td>
+                            <td><a href="#">Khoa học Tự nhiên</a></td>
+                            <td><a href="#">Khoa học Xã hội</a></td>
+                        </tr>
+                        <tr>
+                            <td><a href="#">Tài liệu</a></td>
+                            <td><a href="#">Toán</a></td>
+                            <td><a href="#">Ngữ Văn</a></td>
+                            <td><a href="#">Tiếng Anh</a></td>
+                            <td><a href="#">Khoa học Tự nhiên</a></td>
+                            <td><a href="#">Khoa học Xã hội</a></td>
+                        </tr>
+                    </table>
+                </div>
+                <div id="THPT" class="tabcontent">
+                    <table>
+                        <tr>
+                            <th colspan="4">Trung học Phổ thông</th>
+                        </tr>
+                        <tr>
+                            <td><a href="#kh-THPT">Khóa học</a></td>
+                            <td><a href="#kh-l12">Lớp 12</a></td>
+                            <td><a href="#kh-l11">Lớp 11</a></td>
+                            <td><a href="#kh-l10">Lớp 10</a></td>
+                        </tr>
+                        <tr>
+                            <td><a href="#">Luyện tập</a></td>
+                            <td><a href="#">Lớp 12</a></td>
+                            <td><a href="#">Lớp 11</a></td>
+                            <td><a href="#">Lớp 10</a></td>
+                        </tr>
+                        <tr>
+                            <td><a href="#">Tài liệu</a></td>
+                            <td><a href="#">Lớp 12</a></td>
+                            <td><a href="#">Lớp 11</a></td>
+                            <td><a href="#">Lớp 10</a></td>
+                        </tr>
+                    </table>
+                </div>
+                <div id="THCS" class="tabcontent">
+                    <table>
+                        <tr>
+                            <th colspan="5">Trung học Cơ sở</th>
+                        </tr>
+                        <tr>
+                            <td><a href="#kh-THCS">Khóa học</a></td>
+                            <td><a href="#kh-l9">Lớp 9</a></td>
+                            <td><a href="#kh-l8">Lớp 8</a></td>
+                            <td><a href="#kh-l7">Lớp 7</a></td>
+                            <td><a href="#kh-l6">Lớp 6</a></td>
+                        </tr>
+                        <tr>
+                            <td><a href="#">Luyện tập</a></td>
+                            <td><a href="#">Lớp 9</a></td>
+                            <td><a href="#">Lớp 8</a></td>
+                            <td><a href="#">Lớp 7</a></td>
+                            <td><a href="#">Lớp 6</a></td>
+                        </tr>
+                        <tr>
+                            <td><a href="#">Tài liệu</a></td>
+                            <td><a href="#">Lớp 9</a></td>
+                            <td><a href="#">Lớp 8</a></td>
+                            <td><a href="#">Lớp 7</a></td>
+                            <td><a href="#">Lớp 6</a></td>
+                        </tr>
+                    </table>
+                </div>
+                <div id="TH" class="tabcontent">
+                    <table>
+                        <tr>
+                            <th colspan="6">Tiểu học</th>
+                        </tr>
+                        <tr>
+                            <td><a href="#kh-TH">Khóa học</a></td>
+                            <td><a href="#kh-l5">Lớp 5</a></td>
+                            <td><a href="#kh-l4">Lớp 4</a></td>
+                            <td><a href="#kh-l3">Lớp 3</a></td>
+                            <td><a href="#kh-l2">Lớp 2</a></td>
+                            <td><a href="#kh-l1">Lớp 1</a></td>
+                        </tr>
+                        <tr>
+                            <td><a href="#">Luyện tập</a></td>
+                            <td><a href="#">Lớp 5</a></td>
+                            <td><a href="#">Lớp 4</a></td>
+                            <td><a href="#">Lớp 3</a></td>
+                            <td><a href="#">Lớp 2</a></td>
+                            <td><a href="#">Lớp 1</a></td>
+                        </tr>
+                        <tr>
+                            <td><a href="#">Tài liệu</a></td>
+                            <td><a href="#">Lớp 5</a></td>
+                            <td><a href="#">Lớp 4</a></td>
+                            <td><a href="#">Lớp 3</a></td>
+                            <td><a href="#">Lớp 2</a></td>
+                            <td><a href="#">Lớp 1</a></td>
+                        </tr>
+                    </table>
+                </div>
+            </aside>
+
+            <section>
+                <article id="khoahoc">Khóa học
+                    <div class="kh-main">
+                        <p id="kh-LTDH">Luyện thi Đại học</p>
+                        <div class="kh-submain">
+                            <p id="kh-T">Toán</p>
+                            <div class="kh-mainsub">
+                                <div class="kh-sub">Đại số</div>
+                                <div class="kh-sub">Giải tích</div>
+                                <div class="kh-sub">Hình học</div>
+                            </div>
+                        </div>
+                        <div class="kh-submain">
+                            <p id="kh-NV">Ngữ văn</p>
+                            <div class="kh-mainsub">
+                                <div class="kh-sub">Kiến thức</div>
+                                <div class="kh-sub">Ngữ pháp</div>
+                                <div class="kh-sub">Kỹ năng</div>
+                            </div>
+                        </div>
+                        <div class="kh-submain">
+                            <p id="kh-TA">Tiếng Anh</p>
+                            <div class="kh-mainsub">
+                                <div class="kh-sub">Nghe</div>
+                                <div class="kh-sub">Nói</div>
+                                <div class="kh-sub">Đọc</div>
+                                <div class="kh-sub">Viết</div>
+                                <div class="kh-sub">Ngữ pháp</div>
+                                <div class="kh-sub">Từ vựng</div>
+                            </div>
+                        </div>
+                        <div class="kh-submain">
+                            <p id="kh-KHTN">Khoa học Tự nhiên</p>
+                            <div class="kh-mainsub">
+                                <div class="kh-sub">Vật lý</div>
+                                <div class="kh-sub">Hóa học</div>
+                                <div class="kh-sub">Sinh học</div>
+                            </div>
+                        </div>
+                        <div class="kh-submain">
+                            <p id="kh-KHXH">Khoa học Xã hội</p>
+                            <div class="kh-mainsub">
+                                <div class="kh-sub">Lịch sử</div>
+                                <div class="kh-sub">Địa lý</div>
+                                <div class="kh-sub">Giáo dục Công dân</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="kh-main">
+                        <p id="kh-THPT">Trung học Phổ thông</p>
+                        <div class="kh-submain">
+                            <p id="kh-l12">Lớp 12</p>
+                            <div class="kh-mainsub">
+                                <div class="kh-sub">Ngữ văn</div>
+                                <div class="kh-sub">Toán</div>
+                                <div class="kh-sub">Tiếng Anh</div>
+                                <div class="kh-sub">Vật Lý</div>
+                                <div class="kh-sub">Hóa Học</div>
+                                <div class="kh-sub">Sinh Học</div>
+                            </div>
+                        </div>
+                        <div class="kh-submain">
+                            <p id="kh-l11">Lớp 11</p>
+                            <div class="kh-mainsub">
+                                <div class="kh-sub">Ngữ văn</div>
+                                <div class="kh-sub">Toán</div>
+                                <div class="kh-sub">Tiếng Anh</div>
+                                <div class="kh-sub">Vật Lý</div>
+                                <div class="kh-sub">Hóa Học</div>
+                                <div class="kh-sub">Sinh Học</div>
+                            </div>
+                        </div>
+                        <div class="kh-submain">
+                            <p id="kh-l10">Lớp 10</p>
+                            <div class="kh-mainsub">                        
+                                <div class="kh-sub">Ngữ văn</div>
+                                <div class="kh-sub">Toán</div>
+                                <div class="kh-sub">Tiếng Anh</div>
+                                <div class="kh-sub">Vật Lý</div>
+                                <div class="kh-sub">Hóa Học</div>
+                                <div class="kh-sub">Sinh Học</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="kh-main">
+                        <p id="kh-THCS">Trung học Cơ sở</p>
+                        <div class="kh-submain">
+                            <p id="kh-l9">Lớp 9</p>
+                            <div class="kh-mainsub">
+                                <div class="kh-sub">Ngữ văn</div>
+                                <div class="kh-sub">Toán</div>
+                                <div class="kh-sub">Tiếng Anh</div>
+                                <div class="kh-sub">Vật Lý</div>
+                                <div class="kh-sub">Hóa Học</div>
+                                <div class="kh-sub">Sinh Học</div>
+                            </div>
+                        </div>
+                        <div class="kh-submain">
+                            <p id="kh-l8">Lớp 8</p>
+                            <div class="kh-mainsub">                        
+                                <div class="kh-sub">Ngữ văn</div>
+                                <div class="kh-sub">Toán</div>
+                                <div class="kh-sub">Tiếng Anh</div>
+                                <div class="kh-sub">Vật Lý</div>
+                                <div class="kh-sub">Hóa Học</div>
+                                <div class="kh-sub">Sinh Học</div>
+                            </div>
+                        </div>
+                        <div class="kh-submain">
+                            <p id="kh-l7">Lớp 7</p>
+                            <div class="kh-mainsub">                        
+                                <div class="kh-sub">Ngữ văn</div>
+                                <div class="kh-sub">Toán</div>
+                                <div class="kh-sub">Tiếng Anh</div>
+                                <div class="kh-sub">Vật Lý</div>
+                                <div class="kh-sub">Sinh Học</div>
+                            </div>
+                        </div>                    
+                        <div class="kh-submain">
+                            <p id="kh-l6">Lớp 6</p>
+                            <div class="kh-mainsub">                        
+                                <div class="kh-sub">Ngữ văn</div>
+                                <div class="kh-sub">Toán</div>
+                                <div class="kh-sub">Tiếng Anh</div>
+                                <div class="kh-sub">Vật Lý</div>
+                                <div class="kh-sub">Sinh Học</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="kh-main">
+                        <p id="kh-TH">Tiểu học</p>
+                        <div class="kh-submain">
+                            <p id="kh-l5">Lớp 5</p>
+                            <div class="kh-mainsub">                        
+                                <div class="kh-sub">Tiếng Việt</div>
+                                <div class="kh-sub">Toán</div>
+                                <div class="kh-sub">Tiếng Anh</div>
+                            </div>
+                        </div>
+                        <div class="kh-submain">
+                            <p id="kh-l4">Lớp 4</p>
+                            <div class="kh-mainsub">                        
+                                <div class="kh-sub">Tiếng Việt</div>
+                                <div class="kh-sub">Toán</div>
+                                <div class="kh-sub">Tiếng Anh</div>
+                            </div>
+                        </div>
+                        <div class="kh-submain">
+                            <p id="kh-l3">Lớp 3</p>
+                            <div class="kh-mainsub">                        
+                                <div class="kh-sub">Tiếng Việt</div>
+                                <div class="kh-sub">Toán</div>
+                                <div class="kh-sub">Tiếng Anh</div>
+                            </div>
+                        </div>
+                        <div class="kh-submain">
+                            <p id="kh-l2">Lớp 2</p>
+                            <div class="kh-mainsub">
+                                <div class="kh-sub">Tiếng Việt</div>
+                                <div class="kh-sub">Toán</div>
+                            </div>
+                        </div>
+                        <div class="kh-submain">
+                            <p id="kh-l1">Lớp 1</p>
+                            <div class="kh-mainsub">                        
+                                <div class="kh-sub">Tiếng Việt</div>
+                                <div class="kh-sub">Toán</div>
+                            </div>
+                        </div>
+                    </div>
+                </article>
+            </section>
+
+        </div>
+
+        <footer></footer>
+
+        <!-- Begin Layout Login -->
+        <div id="idlogin" class="user">
+            <form class="user-content animate" action="#" method="POST">
+                <div class="head-content">
+                    <span class="head-content-name">Đăng nhập</span>
+                    <span onclick="document.getElementById('idlogin').style.display='none'" class="head-content-close" title="Close Login">&times;</span>
+                </div>
+                <div class="user-container">
+                    <label for="uname"><b>Username</b></label>
+                    <input type="text" name="uname" placeholder="Enter Username" required>
+                    <label for="psw"><b>Password</b></label>
+                    <input type="password" name="psw" placeholder="Enter Password" required>
+                    <div class="foot-content">
+                        <button type="submit" class="btn-user">Đăng nhập</button>
+                        <p onclick="ReturnSignup()" class="request">Chưa có tài khoản? Đăng ký ngay!</p>
+                    </div>
+                </div>
+            </form>
+        </div>
+        <!-- End Layout Login -->
+
+        <!-- Begin Layout Signup -->
+        <div id="idsignup" class="user">
+            <form class="user-content animate" action="#" method="POST">
+                <div class="head-content">
+                <span class="head-content-name">Đăng ký</span>
+                <span onclick="document.getElementById('idsignup').style.display='none'" class="head-content-close" title="Close Login">&times;</span>
+                </div>
+                <div class="user-container">
+                    <label for="email"><b>Email</b></label>
+                    <input type="email" name="email" placeholder="Enter Email" required>
+                    <label for="uname"><b>Username</b></label>
+                    <input type="text" name="uname" placeholder="Enter Username" required>
+                    <label for="psw"><b>Password</b></label>
+                    <input type="password" name="psw" placeholder="Enter Password" required>
+                    <label for="psw-repeat"><b>Repeat Password</b></label>
+                    <input type="password" placeholder="Repeat Password" name="psw-repeat" required>
+                    <div class="foot-content">
+                        <button type="submit" class="btn-user">Đăng ký</button>
+                        <p onclick="ReturnLogin()" class="request">Đã có tài khoản? Đăng nhập ngay!</p>
+                    </div>
+                </div>
+            </form>
+        </div>
+        <!-- End Layout Signup -->
+
+        <!-- Javascript Here -->
+        <script src="./js/script.js"></script>
+    </body>
+</html>
