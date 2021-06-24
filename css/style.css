@@ -25,7 +25,6 @@ img {
 
 /* CSS Login & Signup */
 .btn-header {
-    background-color: #04AA6D;
     color: white;
     padding: 10px;
     margin: 5px;
@@ -37,8 +36,13 @@ img {
 .btn-header:hover {
     opacity: 0.8;
 }
-.btn-user {
+button.login {
     background-color: #04AA6D;
+}
+button.signup {
+    background-color: #f80;
+}
+.btn-user {
     color: white;
     padding: 12px 20px;
     margin: 8px 0;
@@ -62,11 +66,16 @@ input[type=email] {
     border: 1px solid #ccc;
     border-radius: 8px;
 }
-input[type=text]:focus,
-input[type=password]:focus,
-input[type=email]:focus {
+.login input[type=text]:focus,
+.login input[type=password]:focus {
     outline: none;
     border: 1px solid #04AA6D;
+}
+.signup input[type=text]:focus,
+.signup input[type=password]:focus,
+.signup input[type=email]:focus {
+    outline: none;
+    border: 1px solid #f80;
 }
 .user-container {
     padding: 16px;
@@ -78,11 +87,16 @@ input[type=email]:focus {
 }
 p.request {
     padding-top: 8px;
-    color: #04AA6D;
 }
 p.request:hover {
     cursor: pointer;
     text-decoration: underline;
+}
+p.login {
+    color: #04AA6D;
+}
+p.signup {
+    color: #f80;
 }
 .user {
     display: none;
@@ -212,6 +226,243 @@ aside::after {
     clear: left;
 }
 
+/* CSS cho thanh phải nguồn từ trang hocmai.vn */
+aside {
+    display: block;
+}
+.aside-bar {
+    position: fixed;
+    top: 25%;
+    right: 0;
+    z-index: 1;
+    display: none;
+}
+@media (min-width: 1100px) {
+    .aside-bar {
+        display: block;
+    }
+}
+.aside-bar .list-bar {
+    position: relative;
+    background: #fff;
+    border-top-right-radius: 0px;
+    border-bottom-right-radius: 0px;
+    border-bottom-left-radius: 5px;
+    border-top-left-radius: 5px;
+    box-shadow: 0px 3px 5px rgba(44, 71, 146, 0.2);
+    overflow: hidden;
+    width: 36px;
+    margin-bottom: 0px;
+}
+.aside-bar .list-bar::before {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 5px;
+    background-color: #0773b8;
+}
+.clear-list {
+    padding-left: 0;
+    list-style: none;
+}
+.aside-bar .list-bar li {
+    position: relative;
+    height: 72px;
+    display: list-item;
+    /* text-align: -webkit-match-parent; */
+}
+.aside-bar .list-bar li.bar-c1::before {
+    content: "";
+    position: absolute;
+    width: 0px;
+    height: 70%;
+    right: 0;
+    top: 50%;
+    background-color: #f33e3e;
+    -webkit-transform: translateY(-50%);
+    transform: translateY(-50%);
+    -webkit-transition: 0.2s ease;
+    transition: 0.2s ease;
+}
+.aside-bar .list-bar li.bar-c1.active::before {
+    width: 4px;
+    height: 70%;
+}
+.aside-bar .list-bar li.bar-c1.active a {
+    color: #f33e3e;
+    font-weight: bold;
+}
+.aside-bar .list-bar li.bar-c1:hover a {
+    color: #f33e3e;
+    font-weight: bold;
+}
+
+.aside-bar .list-bar li.bar-c2::before {
+    content: "";
+    position: absolute;
+    width: 0px;
+    height: 70%;
+    right: 0;
+    top: 50%;
+    background-color: #f5620d;
+    -webkit-transform: translateY(-50%);
+    transform: translateY(-50%);
+    -webkit-transition: 0.2s ease;
+    transition: 0.2s ease;
+}
+.aside-bar .list-bar li.bar-c2.active::before {
+    width: 4px;
+    height: 70%;
+}
+.aside-bar .list-bar li.bar-c2.active a {
+    color: #f5620d;
+    font-weight: bold;
+}
+.aside-bar .list-bar li.bar-c2:hover a {
+    color: #f5620d;
+    font-weight: bold;
+}
+.aside-bar .list-bar li.bar-c2::after {
+    content: "";
+    position: absolute;
+    width: 50%;
+    height: 1px;
+    right: 0;
+    top: 0;
+    -webkit-transform: translateX(-50%);
+    transform: translateX(-50%);
+    background-color: #c3c3c3;
+}
+
+.aside-bar .list-bar li.bar-c3::before {
+    content: "";
+    position: absolute;
+    width: 0px;
+    height: 70%;
+    right: 0;
+    top: 50%;
+    background-color: #20f02a;
+    -webkit-transform: translateY(-50%);
+    transform: translateY(-50%);
+    -webkit-transition: 0.2s ease;
+    transition: 0.2s ease;
+}
+.aside-bar .list-bar li.bar-c3.active::before {
+    width: 4px;
+    height: 70%;
+}
+.aside-bar .list-bar li.bar-c3.active a {
+    color: #20f02a;
+    font-weight: bold;
+}
+.aside-bar .list-bar li.bar-c3:hover a {
+    color: #20f02a;
+    font-weight: bold;
+}
+.aside-bar .list-bar li.bar-c3::after {
+    content: "";
+    position: absolute;
+    width: 50%;
+    height: 1px;
+    right: 0;
+    top: 0;
+    -webkit-transform: translateX(-50%);
+    transform: translateX(-50%);
+    background-color: #c3c3c3;
+}
+
+.aside-bar .list-bar li.bar-c4::before {
+    content: "";
+    position: absolute;
+    width: 0px;
+    height: 70%;
+    right: 0;
+    top: 50%;
+    background-color: #0c9aec;
+    -webkit-transform: translateY(-50%);
+    transform: translateY(-50%);
+    -webkit-transition: 0.2s ease;
+    transition: 0.2s ease;
+}
+.aside-bar .list-bar li.bar-c4.active::before {
+    width: 4px;
+    height: 70%;
+}
+.aside-bar .list-bar li.bar-c4.active a {
+    color: #0c9aec;
+    font-weight: bold;
+}
+.aside-bar .list-bar li.bar-c4:hover a {
+    color: #0c9aec;
+    font-weight: bold;
+}
+.aside-bar .list-bar li.bar-c4::after {
+    content: "";
+    position: absolute;
+    width: 50%;
+    height: 1px;
+    right: 0;
+    top: 0;
+    -webkit-transform: translateX(-50%);
+    transform: translateX(-50%);
+    background-color: #c3c3c3;
+}
+
+.aside-bar .list-bar li.bar-c5::before {
+    content: "";
+    position: absolute;
+    width: 0px;
+    height: 70%;
+    right: 0;
+    top: 50%;
+    background-color: #f020a0;
+    -webkit-transform: translateY(-50%);
+    transform: translateY(-50%);
+    -webkit-transition: 0.2s ease;
+    transition: 0.2s ease;
+}
+.aside-bar .list-bar li.bar-c5.active::before {
+    width: 4px;
+    height: 70%;
+}
+.aside-bar .list-bar li.bar-c5.active a {
+    color: #f020a0;
+    font-weight: bold;
+}
+.aside-bar .list-bar li.bar-c5:hover a {
+    color: #f020a0;
+    font-weight: bold;
+}
+.aside-bar .list-bar li.bar-c5::after {
+    content: "";
+    position: absolute;
+    width: 50%;
+    height: 1px;
+    right: 0;
+    top: 0;
+    -webkit-transform: translateX(-50%);
+    transform: translateX(-50%);
+    background-color: #c3c3c3;
+}
+
+.aside-bar .list-bar li .text {
+    position: relative;
+    display: block;
+    top: 50%;
+    -webkit-transform: translateY(-50%) rotate(90deg);
+    transform: translateY(-50%) rotate(90deg);
+    white-space: nowrap;
+    font-size: 14px;
+    text-align: center;
+}
+.aside-bar .list-bar li a {
+    color: #888;
+    text-decoration: none;
+    background-color: transparent;
+}
+
 /* CSS for Table */
 tr, th, td {
     border: 1px solid #000;
@@ -239,11 +490,11 @@ section {
     font-size: 20px;
 }
 #khoahoc {
-    padding-top: 10px;
+    padding-top: 20px;
     width: 100%;
     height: auto;
     background-color: #f1f1f1;
-    font-size: 40px;
+    font-size: 36px;
 }
 article {
     text-align: center;
@@ -256,7 +507,7 @@ article {
     margin: 20px;
     width: auto;
     padding-top: 10px;
-    font-size: 36px;
+    font-size: 32px;
 }
 .kh-submain {
     background-color: #ff0;
@@ -264,10 +515,11 @@ article {
     border-radius: 20px;
     margin: 15px 20px 5px;
     padding-top: 10px;
-    font-size: 32px;
+    font-size: 28px;
 }
 .kh-mainsub {
     display: flex;
+    flex-wrap: wrap;
     justify-content: space-evenly;
 }
 .kh-sub {
@@ -279,9 +531,9 @@ article {
     background-color: #f1f1f1;
     border-radius: 10px;
     border: 1px solid #04AA6D;
-    height: 400px;
-    width: 300px;
-    font-size: 28px;
+    height: 320px;
+    width: 240px;
+    font-size: 24px;
 }
 .kh-sub a {
     padding-top: 5%;
@@ -301,14 +553,14 @@ article {
     display: none; /* Mặc định để ẩn */
     position: fixed; /* Đặt vị trí riêng cố định */
     bottom: 20px;
-    right: 30px;
+    right: 36px;
     z-index: 99;
     border: none;
     outline: none;
     background-color: #00f;
     color: #fff;
     cursor: pointer;
-    padding: 15px;
+    padding: 12px;
     border-radius: 10px;
     font-size: 18px;
 }

@@ -4,6 +4,7 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Website Học Tập</title>
+        <script src="./js/jquery-3.6.0.min.js"></script>
         <link rel="stylesheet" href="./css/style.css">
     </head>
     <body>
@@ -11,8 +12,8 @@
             <img src="./images/icon sach.jpeg" alt="Logo">
             <div>Website Học Tập</div>
             <div>
-                <button class="btn-header" onclick="document.getElementById('idlogin').style.display='block'">Đăng nhập</button>
-                <button class="btn-header" onclick="document.getElementById('idsignup').style.display='block'">Đăng ký</button>
+                <button class="btn-header login" onclick="document.getElementById('idlogin').style.display='block'">Đăng nhập</button>
+                <button class="btn-header signup" onclick="document.getElementById('idsignup').style.display='block'">Đăng ký</button>
             </div>
         </header>
 
@@ -33,7 +34,6 @@
         <div>
 
             <aside>
-                <h2></h2>
                 <div class="tab">
                     <button class="tablinks" onclick="openLevel(event, 'CNTT')" id="defaultOpen">Công nghệ Thông tin</button>
                     <button class="tablinks" onclick="openLevel(event, 'LTDH')">Luyện thi Đại học</button>
@@ -175,6 +175,25 @@
                             <td><a href="#">Lớp 1</a></td>
                         </tr>
                     </table>
+                </div>
+                <div class="aside-bar">
+                    <ul class="clear-list list-bar">
+                        <li class="bar-c1">
+                            <a class="text" href="#kh-CNTT" title="Công nghệ Thông tin"> CNTT </a>
+                        </li>
+                        <li class="bar-c2">
+                            <a class="text" href="#kh-LTDH" title="Luyện thi Đại học"> LTDH </a>
+                        </li>
+                        <li class="bar-c3">
+                            <a class="text" href="#kh-THPT" title="Trung học Phổ thông"> THPT </a>
+                        </li>
+                        <li class="bar-c4">
+                            <a class="text" href="#kh-THCS" title="Trung học Cơ sở"> THCS </a>
+                        </li>
+                        <li class="bar-c5">
+                            <a class="text" href="#kh-TH" title="Tiểu học"> TH </a>
+                        </li>
+                    </ul>
                 </div>
             </aside>
 
@@ -662,7 +681,7 @@
         </footer>
 
         <!-- Begin Layout Login -->
-        <div id="idlogin" class="user">
+        <div id="idlogin" class="user login">
             <form class="user-content animate" action="#" method="POST">
                 <div class="head-content">
                     <span class="head-content-name">Đăng nhập</span>
@@ -674,8 +693,8 @@
                     <label for="psw"><b>Password</b></label>
                     <input type="password" name="psw" placeholder="Enter Password" required>
                     <div class="foot-content">
-                        <button type="submit" class="btn-user">Đăng nhập</button>
-                        <p onclick="ReturnSignup()" class="request">Chưa có tài khoản? Đăng ký ngay!</p>
+                        <button type="submit" class="btn-user login">Đăng nhập</button>
+                        <p onclick="ReturnSignup()" class="request signup">Chưa có tài khoản? Đăng ký ngay!</p>
                     </div>
                 </div>
             </form>
@@ -683,11 +702,11 @@
         <!-- End Layout Login -->
 
         <!-- Begin Layout Signup -->
-        <div id="idsignup" class="user">
+        <div id="idsignup" class="user signup">
             <form class="user-content animate" action="#" method="POST">
                 <div class="head-content">
                 <span class="head-content-name">Đăng ký</span>
-                <span onclick="document.getElementById('idsignup').style.display='none'" class="head-content-close" title="Close Login">&times;</span>
+                <span onclick="document.getElementById('idsignup').style.display='none'" class="head-content-close" title="Close Signup">&times;</span>
                 </div>
                 <div class="user-container">
                     <label for="email"><b>Email</b></label>
@@ -699,8 +718,8 @@
                     <label for="psw-repeat"><b>Repeat Password</b></label>
                     <input type="password" placeholder="Repeat Password" name="psw-repeat" required>
                     <div class="foot-content">
-                        <button type="submit" class="btn-user">Đăng ký</button>
-                        <p onclick="ReturnLogin()" class="request">Đã có tài khoản? Đăng nhập ngay!</p>
+                        <button type="submit" class="btn-user signup">Đăng ký</button>
+                        <p onclick="ReturnLogin()" class="request login">Đã có tài khoản? Đăng nhập ngay!</p>
                     </div>
                 </div>
             </form>

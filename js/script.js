@@ -48,6 +48,60 @@ function scrollFunction() {
         btn_top.style.display = 'none';
     }
 }
+
+// Xử lý cho thanh phải nguồn từ trang hocmai.vn
+$(document).ready(function () {
+    $(window).scroll(function () {
+        var scroll = $(window).scrollTop();
+        if (scroll < 450) {
+            $('.bar-c1').removeClass('active');
+            $('.bar-c2').removeClass('active');
+            $('.bar-c3').removeClass('active');
+            $('.bar-c4').removeClass('active');
+            $('.bar-c5').removeClass('active');
+        }
+        if (scroll >= 450) {
+            $('.bar-c1').addClass('active');
+            $('.bar-c2').removeClass('active');
+            $('.bar-c3').removeClass('active');
+            $('.bar-c4').removeClass('active');
+            $('.bar-c5').removeClass('active');
+        }
+        if (scroll >= 920) {
+            $('.bar-c2').addClass('active');
+            $('.bar-c1').removeClass('active');
+            $('.bar-c3').removeClass('active');
+            $('.bar-c4').removeClass('active');
+            $('.bar-c5').removeClass('active');
+        }
+        if (scroll >= 3350) {
+            $('.bar-c3').addClass('active');
+            $('.bar-c1').removeClass('active');
+            $('.bar-c2').removeClass('active');
+            $('.bar-c4').removeClass('active');
+            $('.bar-c5').removeClass('active');
+        }
+        if (scroll >= 5650) {
+            $('.bar-c4').addClass('active');
+            $('.bar-c1').removeClass('active');
+            $('.bar-c2').removeClass('active');
+            $('.bar-c3').removeClass('active');
+            $('.bar-c5').removeClass('active');
+        }
+        if (scroll >= 8700) {
+            $('.bar-c5').addClass('active');
+            $('.bar-c1').removeClass('active');
+            $('.bar-c2').removeClass('active');
+            $('.bar-c3').removeClass('active');
+            $('.bar-c4').removeClass('active');
+        }
+    })
+    $('.list-bar li a').click(function () {
+        $('.list-bar li').removeClass('active');
+        $(this).parent().addClass('active');
+    })
+})
+
 // Khi người dùng kích lên nút, cuộn về đầu trang
 function topFunction() {
     document.body.scrollTop = 0; // For Safari
