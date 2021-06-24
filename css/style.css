@@ -243,6 +243,7 @@ section {
     width: 100%;
     height: auto;
     background-color: #f1f1f1;
+    font-size: 40px;
 }
 article {
     text-align: center;
@@ -254,19 +255,23 @@ article {
     background-color: #0ff;
     margin: 20px;
     width: auto;
+    padding-top: 10px;
+    font-size: 36px;
 }
 .kh-submain {
     background-color: #ff0;
     border: 2px solid #00f;
     border-radius: 20px;
     margin: 15px 20px 5px;
+    padding-top: 10px;
+    font-size: 32px;
 }
 .kh-mainsub {
     display: flex;
     justify-content: space-evenly;
 }
 .kh-sub {
-    display: block;
+    display: flex;
     flex-direction: column;
     align-items: center;
     margin: 10px;
@@ -274,10 +279,19 @@ article {
     background-color: #f1f1f1;
     border-radius: 10px;
     border: 1px solid #04AA6D;
-    height: 150px;
-    width: 150px;
+    height: 400px;
+    width: 300px;
+    font-size: 28px;
+}
+.kh-sub a {
+    padding-top: 5%;
+    width: 100%;
+    height: 100%;
+    text-decoration: none;
+    color: #000;
 }
 .kh-sub img {
+    padding-top: 10px;
     width: 80%;
     height: 80%;
 }
