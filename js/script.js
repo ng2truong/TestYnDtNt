@@ -36,59 +36,74 @@ function openLevel(evt, levelName) {
 }
 document.getElementById("defaultOpen").click();
 
-// Xử lý nút cuộn lên đầu trang
-// Gán tên biến cho phần tử nút - Get varname for button element
-var btn_top = document.getElementById('btn-top');
-// Khi người dùng cuộn xuống 20 pixels từ đỉnh trang thì cho hiện nút
-window.onscroll = function () {scrollFunction()};
-function scrollFunction() {
-    if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
-        btn_top.style.display = 'block';
-    } else {
-        btn_top.style.display = 'none';
-    }
+// Xử lý rê chuột vào class
+var elems = document.querySelectorAll('.kh-sub');
+var btn_link = document.getElementById('btn-link');
+for (let i = 0; i < elems.length; i++) {
+    elems[i].addEventListener('mousemove', FuncIn, false);
+    elems[i].addEventListener('mouseleave', FuncOut, false);
 }
+function FuncIn() {
+    this.style.opacity = 0.5;
+}
+function FuncOut() {
+    this.style.opacity = 1;
+}
+
+// Xử lý OwlCarousel2
+$(document).ready(function () {
+    var owl = $('.owl-carousel');
+    owl.owlCarousel({
+        items: 4,
+        loop: true,
+        // margin: 10,
+        // padding: 20,
+        autoplay: true,
+        autoplayTimeout: 2000,
+        autoplayHoverPause: true
+    });
+})
 
 // Xử lý cho thanh phải nguồn từ trang hocmai.vn
 $(document).ready(function () {
     $(window).scroll(function () {
         var scroll = $(window).scrollTop();
-        if (scroll < 450) {
+        if (scroll < 420) {
             $('.bar-c1').removeClass('active');
             $('.bar-c2').removeClass('active');
             $('.bar-c3').removeClass('active');
             $('.bar-c4').removeClass('active');
             $('.bar-c5').removeClass('active');
         }
-        if (scroll >= 450) {
+        if (scroll >= 420) {
             $('.bar-c1').addClass('active');
             $('.bar-c2').removeClass('active');
             $('.bar-c3').removeClass('active');
             $('.bar-c4').removeClass('active');
             $('.bar-c5').removeClass('active');
         }
-        if (scroll >= 920) {
+        if (scroll >= 890) {
             $('.bar-c2').addClass('active');
             $('.bar-c1').removeClass('active');
             $('.bar-c3').removeClass('active');
             $('.bar-c4').removeClass('active');
             $('.bar-c5').removeClass('active');
         }
-        if (scroll >= 3350) {
+        if (scroll >= 2990) {
             $('.bar-c3').addClass('active');
             $('.bar-c1').removeClass('active');
             $('.bar-c2').removeClass('active');
             $('.bar-c4').removeClass('active');
             $('.bar-c5').removeClass('active');
         }
-        if (scroll >= 5650) {
+        if (scroll >= 4350) {
             $('.bar-c4').addClass('active');
             $('.bar-c1').removeClass('active');
             $('.bar-c2').removeClass('active');
             $('.bar-c3').removeClass('active');
             $('.bar-c5').removeClass('active');
         }
-        if (scroll >= 8700) {
+        if (scroll >= 6150) {
             $('.bar-c5').addClass('active');
             $('.bar-c1').removeClass('active');
             $('.bar-c2').removeClass('active');
@@ -102,22 +117,20 @@ $(document).ready(function () {
     })
 })
 
+// Xử lý nút cuộn lên đầu trang
+// Gán tên biến cho phần tử nút - Get varname for button element
+var btn_top = document.getElementById('btn-top');
+// Khi người dùng cuộn xuống 20 pixels từ đỉnh trang thì cho hiện nút
+window.onscroll = function () {scrollFunction()};
+function scrollFunction() {
+    if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+        btn_top.style.display = 'block';
+    } else {
+        btn_top.style.display = 'none';
+    }
+}
 // Khi người dùng kích lên nút, cuộn về đầu trang
 function topFunction() {
     document.body.scrollTop = 0; // For Safari
     document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
-}
-
-// Xử lý rê chuột vào class
-var elems = document.querySelectorAll('.kh-sub');
-var btn_link = document.getElementById('btn-link');
-for (let i = 0; i < elems.length; i++) {
-    elems[i].addEventListener('mousemove', FuncIn, false);
-    elems[i].addEventListener('mouseleave', FuncOut, false);
-}
-function FuncIn() {
-    this.style.opacity = 0.5;
-}
-function FuncOut() {
-    this.style.opacity = 1;
 }
