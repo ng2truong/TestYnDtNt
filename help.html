@@ -1,11 +1,92 @@
 <!DOCTYPE html>
 <html>
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Trợ giúp</title>
-</head>
-<body>
-    
-</body>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Trợ giúp</title>
+        <link rel="stylesheet" href="./css/style.css">
+    </head>
+    <body>
+        <header>
+            <img src="./images/icon sach.jpeg" alt="Logo">
+            <div>Website Học Tập</div>
+            <div>
+                <button class="btn-header login" onclick="document.getElementById('idlogin').style.display='block'">Đăng nhập</button>
+                <button class="btn-header signup" onclick="document.getElementById('idsignup').style.display='block'">Đăng ký</button>
+            </div>
+        </header>
+
+        <nav>
+            <div class="navbar">
+                <a href="./index.html">Trang chủ</a>
+                <a href="./introduction.html">Giới thiệu</a>
+                <a href="./course/index.html">Khóa học</a>
+                <a href="./exercise/index.html">Luyện tập</a>
+                <a href="./document/index.html">Tài liệu</a>
+                <a href="./community.html">Cộng đồng</a>
+                <a href="./help.html">Trợ giúp</a>
+                <a href="./donate.html">Donate</a>
+                <a href="./about.html">About</a>
+            </div>
+        </nav>
+
+        <div id="help-content">
+            
+        </div>
+
+        <footer>
+            <div>Kênh giáo dục đầy đủ, mới nhất và luôn luôn được cập nhật!</div>
+            <div>Nhóm Sinh Viên: Huỳnh Cao Yến Như - Đỗ Thị Đài Trang - Nguyễn Ngọc Trường</div>
+            <div>Lớp DC20CTT01 - Trường Đại Học Phú Yên</div>
+        </footer>
+
+        <!-- Begin Layout Login -->
+        <div id="idlogin" class="user login">
+            <form class="user-content animate" action="#" method="POST">
+                <div class="head-content">
+                    <span class="head-content-name">Đăng nhập</span>
+                    <span onclick="document.getElementById('idlogin').style.display='none'" class="head-content-close" title="Close Login">&times;</span>
+                </div>
+                <div class="user-container">
+                    <label for="uname"><b>Username</b></label>
+                    <input type="text" name="uname" placeholder="Enter Username" required>
+                    <label for="psw"><b>Password</b></label>
+                    <input type="password" name="psw" placeholder="Enter Password" required>
+                    <div class="foot-content">
+                        <button type="submit" class="btn-user login">Đăng nhập</button>
+                        <p onclick="ReturnSignup()" class="request signup">Chưa có tài khoản? Đăng ký ngay!</p>
+                    </div>
+                </div>
+            </form>
+        </div>
+        <!-- End Layout Login -->
+
+        <!-- Begin Layout Signup -->
+        <div id="idsignup" class="user signup">
+            <form class="user-content animate" action="#" method="POST">
+                <div class="head-content">
+                <span class="head-content-name">Đăng ký</span>
+                <span onclick="document.getElementById('idsignup').style.display='none'" class="head-content-close" title="Close Signup">&times;</span>
+                </div>
+                <div class="user-container">
+                    <label for="email"><b>Email</b></label>
+                    <input type="email" name="email" placeholder="Enter Email" required>
+                    <label for="uname"><b>Username</b></label>
+                    <input type="text" name="uname" placeholder="Enter Username" required>
+                    <label for="psw"><b>Password</b></label>
+                    <input type="password" name="psw" placeholder="Enter Password" required>
+                    <label for="psw-repeat"><b>Repeat Password</b></label>
+                    <input type="password" placeholder="Repeat Password" name="psw-repeat" required>
+                    <div class="foot-content">
+                        <button type="submit" class="btn-user signup">Đăng ký</button>
+                        <p onclick="ReturnLogin()" class="request login">Đã có tài khoản? Đăng nhập ngay!</p>
+                    </div>
+                </div>
+            </form>
+        </div>
+        <!-- End Layout Signup -->
+
+        <!-- Javascript Here -->
+        <script src="./js/script.js"></script>
+    </body>
 </html>
